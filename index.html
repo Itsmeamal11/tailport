@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amaldev's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Custom Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    html {
+  scroll-behavior: smooth;
+}
+@keyframes slide-in {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  
+  .animate-slide-in {
+    animation: slide-in 1s ease-out;
+  }
+  </style>
+</head>
+<body class="bg-black text-gray-200 font-sans">
+  <!-- Navbar -->
+  <nav class="bg-transparent shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px- sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Branding -->
+            <div class="flex items-center">
+                <a href="#home" class="text-2xl font-bold text-blue-600">MyPortfolio</a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-600">Projects</a>
+                <a href="#contacts" class="text-gray-600 hover:text-blue-600">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden bg-black md:hidden">
+        <a href="#home" class="block py-2 px-4 text-gray-600 hover:bg-blue-100">Home</a>
+        <a href="#about" class="block py-2 px-4 text-gray-600 hover:bg-blue-100">About</a>
+        <a href="#projects" class="block py-2 px-4 text-gray-600 hover:bg-blue-100">Projects</a>
+        <a href="#contacts" class="block py-2 px-4 text-gray-600 hover:bg-blue-100">Contact</a>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu visibility
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+  <!-- Hero Section -->
+   <section id="home">
+  <section class="h-screen bg-cover bg-center" style="background-image: url('./media/image\ copy.png');">
+    <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+        <div class="text-center text-white">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Hi, I'm Amaldev</h1>
+            <p class="text-lg md:text-2xl mb-6">A Full Stack Web Developer & Designer</p>
+            <a href="#projects" class="px-6 py-3 bg-white text-gray-800 font-medium rounded-md hover:bg-gray-100">See My Work</a>
+        </div>
+    </div>
+</section>
+</section>
+   <!-- About Section -->
+   <section id="about" class="py-20 bg-black">
+    <div class="container mx-auto grid md:grid-cols-2 items-center gap-8 px-6">
+        <!-- Left Side: Image -->
+        <div class="flex justify-center">
+            <img 
+                src="./media/image copy 2.png" 
+                alt="About Me" 
+                class="rounded-lg shadow-lg max-w-full"
+            />
+        </div>
+
+        <!-- Right Side: Text Content -->
+        <div>
+            <h3 class="text-pink-500 uppercase text-sm font-bold mb-2">Hello,</h3>
+            <h2 class="text-3xl font-bold mb-4">Full Stack Developer</h2>
+            <!-- <p class="text-lg mb-4 font-semibold text-gray-800">Amaldev</p> -->
+            <p class="text-gray-600 leading-relaxed">
+              My name is Amaldev, and I am a passionate and driven individual who thrives on creativity and problem-solving. With a strong background in web development, I am committed to creating experiences that leave lasting impressions.
+
+              Currently, I am actively working on bringing innovative ideas to life through my work, focusing on the seamless integration of aesthetics and functionality. Whether it is planning an unforgettable event or developing a user-friendly digital experience, I am always eager to take on new challenges and expand my capabilities.
+              
+              I invite you to explore my work and do not hesitate to contact me if you would like to collaborate or simply connect.
+            </p>
+        </div>
+    </div>
+</section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-black">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6 text-white">My Projects</h3>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Project Card -->
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:scale-105 transform transition">
+          <img src="./media/image.png" alt="Game Store" class="rounded-md mb-4 mx-auto">
+          <h4 class="text-xl font-semibold mb-2">Game Store</h4>
+          <p class="text-gray-300">An online game store offering a wide range of video games, with an intuitive interface and secure checkout process.</p>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:scale-105 transform transition">
+          <img src="./media/apple.png" alt="Apple Inspired Website" class="rounded-md mb-4 mx-auto">
+          <h4 class="text-xl font-semibold mb-2">Apple Inspired Website</h4>
+          <p class="text-gray-300">A sleek and modern website inspired by Apple's design principles, focusing on simplicity and elegance.</p>
+        </div>
+       
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:scale-105 transform transition">
+          <img src="./media/portfolio.png" alt="Personal Portfolio" class="rounded-md mb-4 mx-auto">
+          <h4 class="text-xl font-semibold mb-2">Personal Portfolio</h4>
+          <p class="text-gray-300">My personal portfolio showcasing my skills and projects, built with HTML and CSS.</p>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+  </section>
+  <!-- My SKills -->
+   <!-- Skills Section -->
+<!-- Skills Section -->
+<div class="p-8 sm:p-4">
+<section id="skills" class="py-20 bg-black">
+  <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-10">My Skills</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Skill 1 -->
+          <div class="text-left">
+              <h3 class="text-lg font-semibold mb-2">HTML & CSS</h3>
+              <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+                  <div class="bg-indigo-600 h-4 rounded-full" style="width: 90%;"></div>
+              </div>
+              <p class="text-sm text-gray-600 mt-1">90%</p>
+          </div>
+          <!-- Skill 2 -->
+          <div class="text-left">
+              <h3 class="text-lg font-semibold mb-2">JavaScript</h3>
+              <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+                  <div class="bg-indigo-600 h-4 rounded-full" style="width: 80%;"></div>
+              </div>
+              <p class="text-sm text-gray-600 mt-1">80%</p>
+          </div>
+          <!-- Skill 3 -->
+          <div class="text-left">
+              <h3 class="text-lg font-semibold mb-2">Tailwind CSS</h3>
+              <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+                  <div class="bg-indigo-600 h-4 rounded-full" style="width: 85%;"></div>
+              </div>
+              <p class="text-sm text-gray-600 mt-1">85%</p>
+          </div>
+          <!-- Skill 4 -->
+          <div class="text-left">
+              <h3 class="text-lg font-semibold mb-2">React</h3>
+              <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+                  <div class="bg-indigo-600 h-4 rounded-full" style="width: 75%;"></div>
+              </div>
+              <p class="text-sm text-gray-600 mt-1">75%</p>
+          </div>
+          <!-- Skill 5 -->
+          <div class="text-left">
+              <h3 class="text-lg font-semibold mb-2">Node.js</h3>
+              <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+                  <div class="bg-indigo-600 h-4 rounded-full" style="width: 70%;"></div>
+              </div>
+              <p class="text-sm text-gray-600 mt-1">70%</p>
+          </div>
+          <!-- Skill 6 -->
+          <div class="text-left">
+              <h3 class="text-lg font-semibold mb-2">UI/UX Design</h3>
+              <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+                  <div class="bg-indigo-600 h-4 rounded-full" style="width: 60%;"></div>
+              </div>
+              <p class="text-sm text-gray-600 mt-1">60%</p>
+          </div>
+      </div>
+  </div>
+</section>
+<div>
+
+  <!-- Contact Section -->
+  <div class="p-8 sm:p-4">
+
+   <section id="contacts">
+   <section class="mb-6">
+
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold  mt-6 mb-6 text-white">Get In Touch</h3>
+      <p class="text-lg text-gray-300 mb-10">
+        Have a project in mind or just want to say hello? Reach out!
+      </p>
+      <div class="flex justify-center space-x-6 mb-8">
+        <a href="mailto:amaldevvaderiparambilbiju@gmail.com" class="bg-teal-500 text-white px-8 py-3 rounded-md font-semibold shadow-md hover:bg-teal-400 transition transform hover:scale-105">
+          Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/amaldev-v-biju-a92104307" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold shadow-md hover:bg-blue-500 transition transform hover:scale-105">
+          LinkedIn
+        </a>
+        <a href="https://github.com/Itsmeamal11" target="_blank" class="bg-gray-800 text-white px-8 py-3 rounded-md font-semibold shadow-md hover:bg-gray-700 transition transform hover:scale-105">
+          GitHub
+        </a>
+      </div>
+      <form action="https://formspree.io/f/{your-id}" method="POST" class="max-w-xl mx-auto">
+        <div class="mb-4">
+          <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-2 rounded-md bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 transition">
+        </div>
+        <div class="mb-4">
+          <input type="email" name="_replyto" placeholder="Your Email" class="w-full px-4 py-2 rounded-md bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 transition">
+        </div>
+        <div class="mb-4">
+          <textarea name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 rounded-md bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 transition"></textarea>
+        </div>
+        <button type="submit" class="bg-teal-500 text-white px-8 py-3 rounded-md font-semibold shadow-md hover:bg-teal-400 transition transform hover:scale-105">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section></div>
+</section>
+</div>
+  <!-- Footer -->
+  <div class="p-8 sm:p-4">
+  <footer class="py-6 bg-black text-center text-gray-400">
+    <p>&copy; 2024 Amaldev. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+</html>
